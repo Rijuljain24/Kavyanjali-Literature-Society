@@ -1,7 +1,7 @@
 .photo-scroll-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Adjust based on your design */
+  height: 100vh; /* Full screen height */
   overflow: hidden;
 }
 
@@ -21,44 +21,86 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%; /* Adjust width for text */
+  width: 50%;
   height: 100%;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
-  z-index: 2; /* Ensure it stays above images */
+  padding: 60px;
+  z-index: 2;
+  text-align: left;
 }
 
 .overlay-gradient h1 {
-  font-size: 50rem;
-  font-weight: bolder;
-  align-items: center;
-  margin-bottom: 10px;
+  font-size: 3rem; /* Responsive size */
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .overlay-gradient p {
   font-size: 1.2rem;
-  align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  max-width: 80%;
+  line-height: 1.5;
 }
 
+/* About Button */
 .about-btn {
   background: #ff3366;
-  align-self: center;
-  border-radius: 20px;
+  border-radius: 30px;
   color: white;
-  padding: 12px 24px;
+  padding: 14px 28px;
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  transition: 0.3s ease;
-  width: auto;
-  height: auto;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  width: fit-content;
 }
 
 .about-btn:hover {
   background: #cc0044;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .overlay-gradient {
+    width: 60%;
+    padding: 40px;
+  }
+  
+  .overlay-gradient h1 {
+    font-size: 2.5rem;
+  }
+  
+  .overlay-gradient p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay-gradient {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    align-items: center;
+  }
+
+  .overlay-gradient h1 {
+    font-size: 2rem;
+  }
+
+  .overlay-gradient p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .about-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
 }
