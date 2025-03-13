@@ -1,0 +1,64 @@
+.photo-scroll-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust based on your design */
+  overflow: hidden;
+}
+
+.photo-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Black gradient overlay */
+.overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Adjust width for text */
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  z-index: 2; /* Ensure it stays above images */
+}
+
+.overlay-gradient h1 {
+  font-size: 50rem;
+  font-weight: bolder;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.overlay-gradient p {
+  font-size: 1.2rem;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-btn {
+  background: #ff3366;
+  align-self: center;
+  border-radius: 20px;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  width: auto;
+  height: auto;
+}
+
+.about-btn:hover {
+  background: #cc0044;
+}
